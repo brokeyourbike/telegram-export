@@ -128,6 +128,7 @@ def get_extension(mime):
     Returns the most common extension for the given mimetype, or '.bin' if
     none can be found to indicate that it contains arbitrary binary data.
     """
+    mime = str(mime)
     return (
         COMMON_MIME_TO_EXTENSION.get(mime)
         or mimetypes.guess_extension(mime)
